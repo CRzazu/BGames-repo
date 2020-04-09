@@ -69,6 +69,7 @@ function RenderPlayerCard() {
 	{
 		let type = document.createElement("div");
 		type.className = FirstPlayerCard[i].Value;
+		type.classList.add("card-container");
 		type.addEventListener('click', CardEffects(), false);
 		type.innerHTML = FirstPlayerCard[i].Value;
 
@@ -76,18 +77,21 @@ function RenderPlayerCard() {
 		document.getElementById("FirstPlayer").appendChild(type);
 	}
 
-	  document.getElementById("SecondPlayerCard").innerHTML = "";
+	  
 
-  for(let i = 0; i < SecondPlayerCard.length; i++)
+/*  for(let i = 0; i < SecondPlayerCard.length; i++)
 	{
 		let type = document.createElement("div");
 		type.className = SecondPlayerCard[i].Value;
+		type.classList.add("card-container");
 		type.addEventListener('click', CardEffects(), false);
 		type.innerHTML = SecondPlayerCard[i].Value;
 
 
 		document.getElementById("SecondPlayerCard").appendChild(type);
 	}
+
+	 document.getElementById("SecondPlayer").innerHTML = "";*/
 }
 
 function CardEffects()
