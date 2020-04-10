@@ -1,0 +1,112 @@
+
+.first-player{
+    margin-top: 20px;
+    margin-left: 420px;
+}
+
+
+.second-player{
+    margin-top: 245px;
+    margin-left: 420px;
+    }
+
+.first-player-button{
+  margin-top: 30px;
+  margin-left: 3px;
+  font-size: 18px;
+}
+
+.second-player-button{
+  margin-top: 30px;
+  float: right;
+  margin-right: 35px;
+  font-size: 18px;
+}
+
+.Attack{
+    font-size: 0;  
+  display: inline-block;
+  background-image:url(/Ex-cats/img/Attack/Attack-1.jpg);
+  margin: 7px;
+  width: 100px;
+  height: 145px;
+}
+
+
+
+.Defuse{
+  font-size: 0;  
+  display: inline-block;
+  background-image: url(/Ex-cats/img/Defuse/defuse-1.jpg);
+  margin: 7px;
+  width: 100px;
+  height: 145px;
+}
+
+
+
+.explosion{
+    font-size: 0;  
+  display: inline-block;
+  background-image: url(/Ex-cats/img/Attack/Attack-1.jpg);
+  margin: 7px;
+  width: 100px;
+  height: 145px;
+}
+
+
+
+.Favor{
+    font-size: 0;  
+  display: inline-block;
+  background-image: url(/Ex-cats/img/Favor/Favor-1.jpg);
+  margin: 7px;
+  width: 100px;
+  height: 145px;
+  margin: 3px;
+  width: 100px;
+}
+
+
+
+.SeeTheFuture{
+    font-size: 0;  
+  display: inline-block;
+  background-image: url(/Ex-cats/img/Fututre/future-1.jpg);
+  margin: 7px;
+  width: 100px;
+  height: 145px;
+}
+
+
+.Nope{
+    font-size: 0;  
+  display: inline-block;
+  background-image: url(/Ex-cats/img/No/no-1.jpg);
+  margin: 7px;
+  width: 100px;
+  height: 145px;
+}
+
+
+
+.Shuffle{ 
+    font-size: 0;  
+  display: inline-block;
+  background-image: url(/Ex-cats/img/Shufle/Shufle-1.jpg);
+  margin: 7px;
+  width: 100px;
+  height: 145px;
+}
+
+
+
+
+.Skip{
+    font-size: 0;  
+  display: inline-block;
+  background-image: url(/Ex-cats/img/Skip/skip-1.jpg);
+  margin: 7px;
+  width: 100px;
+  height: 145px;
+}
