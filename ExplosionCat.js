@@ -2,15 +2,16 @@
 let type = ["Attack", "Shuffle", "Nope", "Skip", "Favor", "SeeTheFuture"];
 let count = [4, 4, 5, 4, 4, 5];
 let deck = [];
-var FirstPlayerCard = [];
-var SecondPlayerCard = [];
+let FirstPlayerCard = [];
+let SecondPlayerCard = [];
+let CheckPlayer = 1;
 //"ExplosionCats", "Defuse"
 // 4, 6
 // 5x4
 function CreateCard() {
   for (let i = 0 ; i < type.length ; i ++) {
     for (let j = 0 ; j < count[i];j++) {
-	  var cards = {Value: type[i]};
+	  let cards = {Value: type[i]};
 	  CreateDeck(cards);
     }
   }
@@ -70,31 +71,52 @@ function RenderPlayerCard() {
 		let type = document.createElement("div");
 		type.className = FirstPlayerCard[i].Value;
 		type.classList.add("card-container");
-		type.addEventListener('click', CardEffects(), false);
+		type.setAttribute("onclick", "CardEffects(this)");
 		type.innerHTML = FirstPlayerCard[i].Value;
 
 
 		document.getElementById("FirstPlayer").appendChild(type);
 	}
 
-	  
+	   document.getElementById("SecondPlayer").innerHTML = "";
 
-/*  for(let i = 0; i < SecondPlayerCard.length; i++)
+  for(let i = 0; i < SecondPlayerCard.length; i++)
 	{
 		let type = document.createElement("div");
 		type.className = SecondPlayerCard[i].Value;
 		type.classList.add("card-container");
-		type.addEventListener('click', CardEffects(), false);
+		type.setAttribute("onclick", "CardEffects(this)");
 		type.innerHTML = SecondPlayerCard[i].Value;
 
 
-		document.getElementById("SecondPlayerCard").appendChild(type);
+		document.getElementById("SecondPlayer").appendChild(type);
 	}
 
-	 document.getElementById("SecondPlayer").innerHTML = "";*/
+	 
 }
 
-function CardEffects()
+function CardEffects(link)
 {
+   let t = link.innerText || link.textContent;
+
+  if(t  == "Attack") {
+    Attack();
+    RenderPlayerCard();
+  }
+  if(t == "Shuffle"){
+  	ShuffleDeck();
+  }
 
 }
+
+
+function Attack()
+{
+  if(CheckPlayer == 1)
+  	return FirstPlayerCard.push(deck.pop());
+  else 
+  	return SecondPlayerCard.push(deck.pop());
+}
+
+
+
